@@ -1,0 +1,73 @@
+{% block header %}
+    {% load static %}
+    <!-- Header -->
+    <div class="header">
+        <div class="info">
+            <div class="info-item">
+                <p>Hotline: 0933381675 -02389292525</p>
+            </div>
+            <div class="info-item">
+                <p>Địa Chỉ: 99 Cao Thắng, Phường 03, Quận 3, TP. Hồ Chí Minh</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-logo">
+                <a href="/">
+                    <img class="header-logo--sv" alt="main logo"
+                         src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658055279/carousel/LOGOhd_ygbntw.png"/>
+                </a>
+            </div>
+            <div class="header-menu">
+                <i class="bi bi-list-ul header-menu-icon"></i>
+                <ul id="header-menu-res" class="header-menu-ul header-menu-ul--mobile">
+                    <div class="header-menu-item">
+                        <li>GIỚI THIỆU</li>
+                        <ul class="header-menu--sub">
+                            <li><a class="text-decoration-none" href="#">HTML</a></li>
+                            <li><a class="text-decoration-none" href="#">CSS</a></li>
+                            <li><a class="text-decoration-none" href="#">JavaScript</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-menu-item">
+                        <li>TRỒNG RĂNG IMPLANT</li>
+                        <ul class="header-menu--sub">
+                            <li><a class="text-decoration-none" href="#">HTML</a></li>
+                            <li><a class="text-decoration-none" href="#">CSS</a></li>
+                            <li><a class="text-decoration-none" href="#">JavaScript</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="header-menu-item">
+                        <li>BỌC RĂNG SỨ</li>
+                    </div>
+                    <div class="header-menu-item">
+                        <li>DỊCH VỤ KHÁC</li>
+                    </div>
+                     <div class="header-menu-item">
+                         <li><a href="kien-thuc-nha-khoa">KIẾN THỨC NHA KHOA</a></li>
+                    </div>
+                    <div class="header-menu-item">
+                        <li>BẢNG GIÁ BẢO HÀNH</li>
+                    </div>
+                    <div class="header-menu-item">
+                        <li>KHÁCH HÀNG</li>
+                    </div>
+                      <div class="header-menu-item">
+                        <li>LIÊN HỆ</li>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".header-menu-icon").click(function () {
+            if ($("#header-menu-res").hasClass("active-header"))
+                $(".header-menu-ul").removeClass("active-header")
+            else
+                $(".header-menu-ul").addClass("active-header")
+        })
+
+
+    </script>
+{% endblock %}

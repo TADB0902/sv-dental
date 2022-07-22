@@ -1,0 +1,72 @@
+{% load static %}
+
+{% block customer_reviews %}
+    <div class="list">
+        <h2 class="title-tag">CẢM NHẬN VÀ ĐÁNH GIÁ CỦA KHÁCH HÀNG SAU KHI SỬ DỤNG DỊCH VỤ TẠI NHA KHOA SV - SV DENTAL</h2>
+        <div class="carousel"
+             data-flickity='{"cellAlign": "left", "contain": true ,"wrapAround": true , "autoPlay": true }'>
+            {% for post in posts %}
+                <div class="card card-review ">
+                    <div class="card-body">
+                        <p class="card-text card-review-text">Được sự giới thiệu từ bạn bè, mà Huy đã biết đến Nha Khoa Sv Dental
+                            , các quy trình dịch vụ ở đây đều rất là bảo đảm vệ sinh và an toàn. Sau khi được bác sĩ Thuận nhổ đi 2 cái
+                            răng khôn thì cảm giác đau nhức nó đã tan biến. Huy rất vui vì đã được trải nghiệm các dịch vụ tốt nhất tại nha khoa.
+                            Xin cảm ơn và chúc cho nha khoa ngày càng thành công hơn.</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658076593/rvcontent/idc_dacipa.png" class="card-review-img--top" alt="...">
+                    <div>
+                        <p class="card-review--name">ICD Huy Phạm - Rapper</p>
+                        <p class="card-review--name card-review--sick">Tẩy trắng - Cạo vôi răng - Nhổ răng hhôn</p>
+                    </div>
+                </div>
+                <div class="card card-review ">
+                    <div class="card-body">
+                        <p class="card-text card-review-text">Sự giúp đỡ tận tâm của đội ngũ bác sĩ và tư vấn viên tại nha khoa đã khiến Hương rất hài lòng
+                         , Hương rất yên tâm khi sử dụng các dịch vụ tại Nha Khoa SV Dental. Xin cảm ơn và chúc cho Nha Khoa ngày càng thành công hơn.</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658457914/rvcontent/BLH_lo9hf2.png" class="card-review-img--top" alt="...">
+                    <div>
+                        <p class="card-review--name">Bùi Lan Hương - Ca Sĩ</p>
+                        <p class="card-review--name card-review--sick">Khay Duy Trì - Niềng Răng Trong Suốt</p>
+                    </div>
+                </div>
+                <div class="card card-review ">
+                    <div class="card-body">
+                        <p class="card-text card-review-text">Răng của chúc lúc trước rất vàng và thưa, được sự giới thiệu từ Bác Sĩ Tâm tại Nha Khoa SV,
+                            và sự tư vấn tận tình của bác sĩ, chú đã quyết định làm răng sứ với một kết quả rất là thành công. Xin cảm ơn các bác sĩ tại
+                            Nha Khoa SV Dental.</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658074046/rvcontent/Screenshot_2022-07-17_230657_v46gw9.png" class="card-review-img--top" alt="...">
+                    <div>
+                        <p class="card-review--name">Mai Cao Tiến - Giảng Viên Đại Học</p>
+                        <p class="card-review--name card-review--sick">Làm Răng Sứ - Cạo vôi răng </p>
+                    </div>
+                </div>
+                <div class="card card-review ">
+                    <div class="card-body">
+                        <p class="card-text card-review-text">Trước đây răng của Thành bị lệch và mọc lộn xộn, sau khi được người thân giới thiệu,
+                            Thành đã đến với Sv Dental để niềng răng và nhận được kết quả rất tuyệt vời .
+                            Sau đó Thành đã quay lại để nhổ 2 chiếc răng khôn. Mọi dịch vụ tại đây đều rất tốt, một trải nghiệm đáng nhớ đối với Thành. </p>
+                    </div>
+                    <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658074661/rvcontent/LE_TAN_w5fuow.jpg" class="card-review-img--top" alt="...">
+                    <div>
+                        <p class="card-review--name">Lý Cơ Thành - KOL, Travel Blogger</p>
+                        <p class="card-review--name card-review--sick">Niềng Răng - Nhổ Răng Khôn</p>
+                    </div>
+                </div>
+                <div class="card card-review ">
+                    <div class="card-body">
+                        <p class="card-text card-review-text">Do mất răng cô đã làm hàm tháo lắp, mà chỉ 1 năm sau hàm nó lỏng
+                            lẻo, thức ăn mắc vào rất khó chịu và bất tiện nên cô quyết định trồng
+                            Implant, với sự giúp đỡ của bác sĩ tại nha khoa sv. Cô đã lấy lại được cảm giác hạnh phúc với hàm răng và mất đi các cảm giác khó chịu.</p>
+                    </div>
+                    <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658307403/rvcontent/implant_k2eapp.png" class="card-review-img--top" alt="...">
+                    <div>
+                        <p class="card-review--name">Lê Thị Mai  - Giáo Viên Về Hưu</p>
+                        <p class="card-review--name card-review--sick">Trồng răng Implant - Cạo vôi răng</p>
+                    </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,69 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="intro wrapper">
+        <div class="intro-content">
+            <h1 class="title-tag">NHA KHOA SV - SV Dental</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="intro-clip">
+            <iframe width="942" height="530" src="https://www.youtube.com/embed/lGufzzNf95Q" title="BLOGER LÝ THÀNH CƠ CHIA SẺ NHỔ RĂNG KHÔN TẠI NHA KHOA SV"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+
+            </iframe>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        {% block customer_reviews %}
+            {% include "customer_reviews.html" %}
+        {% endblock %}
+    </div>
+    <div class="service">
+        <h1 class="title-tag">DICH VỤ NỔI BẬT</h1>
+        <div class="service-list">
+            <div class="service-list-item">
+                <img class="service-item--image"
+                     src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658220430/rvcontent/trong-rang-implant_qndqjw.jpg"
+                     alt=""/>
+                <p class="service-item--title">TRỒNG RĂNG IMPLANT</p>
+            </div>
+            <div class="service-list-item">
+                <img class="service-item--image"
+                     src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658219756/rvcontent/boc-rang-su_hhmd42.png"
+                     alt=""/>
+                <p class="service-item--title">BỌC RĂNG SỨ</p>
+            </div>
+            <div class="service-list-item">
+                <img class="service-item--image"
+                     src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658220079/rvcontent/nieng-rang_fjrjlp.jpg"
+                     alt=""/>
+                <p class="service-item--title">NIỀNG RĂNG THẨM MỸ</p>
+            </div>
+            <div class="service-list-item">
+                <img class="service-item--image"
+                     src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658220428/rvcontent/cac-phuong-phap-dieu-tri-nha-khoa-khong-can-lay-tuy-1_wuiobm.png"
+                     alt=""/>
+                <p class="service-item--title">CÁC PHƯƠNG PHÁP ĐIỀU TRỊ</p>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+
+        {% block carousel %}
+            {% include "base/card.html" %}
+        {% endblock %}
+    </div>
+
+
+
+{% endblock %}

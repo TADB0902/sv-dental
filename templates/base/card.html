@@ -1,0 +1,21 @@
+{# Card for post #}
+{% load static %}
+
+{% block carousel %}
+    <h1 class="title-tag">KIẾN THỨC NHA KHOA</h1>
+    <div class="carousel"
+         data-flickity='{"cellAlign": "left", "contain": true ,"wrapAround": true , "autoPlay": true }'>
+        {% for post in posts %}
+            <div class="card">
+                <a class="card-link" href="/post/{{ post.slug }}">
+                    <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-title">{{ post.title }}</p>
+                        {{ post.content| safe | truncatechars:150 }}
+                        <a href="/post/{{ post.slug }}" class="btn-more">Xem thêm</a>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

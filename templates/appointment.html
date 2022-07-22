@@ -1,0 +1,13 @@
+{% block appointment %}
+    {% load static %}
+    <div class="form">
+        <h2 class="title-tag">ĐẶT LỊCH HẸN</h2>
+        <form class="form-appointment" action="/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <div class="col text-center">
+                <input class="form-btn fw-700" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+{% endblock %}

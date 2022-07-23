@@ -1,11 +1,10 @@
 {% load static %}
 
 {% block customer_reviews %}
-    <div class="list">
+    <div class="customer-reviews">
         <h2 class="title-tag">CẢM NHẬN VÀ ĐÁNH GIÁ CỦA KHÁCH HÀNG SAU KHI SỬ DỤNG DỊCH VỤ TẠI NHA KHOA SV - SV DENTAL</h2>
         <div class="carousel"
              data-flickity='{"cellAlign": "left", "contain": true ,"wrapAround": true , "autoPlay": true }'>
-            {% for post in posts %}
                 <div class="card card-review ">
                     <div class="card-body">
                         <p class="card-text card-review-text">Được sự giới thiệu từ bạn bè, mà Huy đã biết đến Nha Khoa Sv Dental
@@ -65,7 +64,6 @@
                         <p class="card-review--name">Lê Thị Mai  - Giáo Viên Về Hưu</p>
                         <p class="card-review--name card-review--sick">Trồng răng Implant - Cạo vôi răng</p>
                     </div>
-            {% endfor %}
             </div>
         </div>
     </div>

@@ -74,3 +74,7 @@ def viewPostDraft(request, slug):
     }
 
     return render(request, "detail.html", context=context)
+
+
+def getContact(request):
+    return render(request, "contact.html")

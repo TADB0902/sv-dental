@@ -1,6 +1,6 @@
 {% extends "base_generic.html" %}
-{% load static %}
 
+{% load static %}
 {% block content %}
 
     <div class="intro wrapper">
@@ -14,20 +14,21 @@
                 software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
         <div class="intro-clip">
-            <iframe width="942" height="530" src="https://www.youtube.com/embed/lGufzzNf95Q" title="BLOGER LÝ THÀNH CƠ CHIA SẺ NHỔ RĂNG KHÔN TẠI NHA KHOA SV"
+            <iframe width="100%" height="530" src="https://www.youtube.com/embed/lGufzzNf95Q"
+                    title="BLOGER LÝ THÀNH CƠ CHIA SẺ NHỔ RĂNG KHÔN TẠI NHA KHOA SV"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
-
             </iframe>
         </div>
     </div>
 
     <div class="wrapper">
-        {% block customer_reviews %}
+         {% block customer_reviews %}
             {% include "customer_reviews.html" %}
         {% endblock %}
     </div>
+
     <div class="service">
         <h1 class="title-tag">DICH VỤ NỔI BẬT</h1>
         <div class="service-list">
@@ -58,12 +59,8 @@
         </div>
     </div>
     <div class="wrapper">
-
-        {% block carousel %}
-            {% include "base/card.html" %}
-        {% endblock %}
+        {% include "base/card.html" %}
     </div>
-
 
 
 {% endblock %}

@@ -1,18 +1,16 @@
 {% extends "base_generic.html" %}
 {% load static %}
 
-{% block title %}
-    <title>Kiến Thức Nha Khoa</title>
-{% endblock %}
-
 {% block content %}
     <div class="list">
-        <h2 class="title-tag">KIẾN THỨC NHA KHOA</h2>
-        <div class="container list-post">
+        {% block title-tag %}
+            {% include "base/title_tag.html" %}
+        {% endblock %}
+        <div class="container-lg list-post">
             {% for post in posts %}
                 <a href="/post/{{ post.slug }}" class="list-post--item">
                     <div class="list-post-main">
-                        <div>
+                        <div class="list-post-img">
                             <img class="list-post--image"
                                  src="{{ post.image.url }}"/>
                         </div>

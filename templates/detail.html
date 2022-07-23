@@ -7,13 +7,20 @@
 
 
 {% block content %}
-    <div class="wrapper">
-    <div class="title-tag">
-    {{ post.title }}
-    </div>
-    <div class="content">
-            {{ post.content | safe }}
+    <div class="title-tag-main">
+        <div class="title-tag-content">
+            <h1 class="title-tag-header">{{ post.title }}</h1>
+            <div class="title-tag-item d-flex justify-content-center">
+                <p class="title-tag-item">Danh mục: {{ post.category }}</p>
+                <p class="title-tag-item">Ngày tạo: {{ post.created_on | date:"d/m/Y" }}</p>
+            </div>
+
+        </div>
 
     </div>
+    <div class="wrapper">
+        <div class="content">
+            {{ post.content | safe }}
+        </div>
     </div>
 {% endblock %}

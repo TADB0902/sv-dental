@@ -11,7 +11,9 @@
                     <img src="{{ post.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-title">{{ post.title }}</p>
-                        {{ post.content| safe | truncatechars:150 }}
+                        <div class="card-post--content">
+                            {{ post.content| safe | truncatechars:150 }}
+                        </div>
                         <a href="/post/{{ post.slug }}" class="btn-more">Xem thêm</a>
                     </div>
                 </a>

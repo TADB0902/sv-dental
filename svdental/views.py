@@ -4,33 +4,16 @@ from .models import Post
 from .form import AppoinmentForm
 from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required, permission_required
-
+from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
     # get home content
 
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = AppoinmentForm(request.POST)
-        # check whether it's valid:
-
-        if form.is_valid():
-            form.save()
-
-            # cc_myself = form.cleaned_data['email']
-            # send_mail("Dây là mai test", 'Dây là mai test', 'hoaithuong.data@gmail.com', [cc_myself])
-
-    else:
-        form = AppoinmentForm()
-
-    posts = Post.objects.filter(active=True, status=1)
-    homeContent = Post.objects.filter(category__name="home", active=True, status=1)
+    posts = Post.objects.filter(active=True, status=1).exclude(category__name = 'home')
 
     context = {
         'posts': posts,
-        'form': form,
-        'home': homeContent,
     }
 
     return render(request, 'index.html', context=context)
@@ -78,3 +61,21 @@ def viewPostDraft(request, slug):
 
 def getContact(request):
     return render(request, "contact.html")
+
+def get_post_from_category(request, slug):
+    posts = Post.objects.filter(category__name = slug ,active=True, status=1)
+
+    return render(request, 'list_post.html', {'page_obj': posts})
+
+
+def custom_page_not_found_view(request, exception):
+    return render(request, "error_page.html", {})
+
+def custom_error_view(request, exception=None):
+    return render(request, "error_page.html", {})
+
+def custom_permission_denied_view(request, exception=None):
+    return render(request, "error_page.html", {})
+
+def custom_bad_request_view(request, exception=None):
+    return render(request, "error_page.html", {})

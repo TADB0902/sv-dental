@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-e!7fpw9icw6^y+4421wr*yfs@-1k81v=ym(=u)g0+-sna&#4g$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -157,7 +157,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CKEDITOR_CONFIGS = {
     'default': {
         'skin': 'moono',
-        #'skin': 'office2013',
         'toolbar_Basic': [
             ['Source', '-', 'Bold', 'Italic']
         ],

@@ -3,11 +3,11 @@
 
 {% block content %}
     <div class="list">
-        {% block title-tag %}
-            {% include "base/title_tag.html" %}
-        {% endblock %}
+        <div class="title-tag-main">
+            <h1 class="p-5 title-tag-main--content">KIẾN THỨC NHA KHOA</h1>
+        </div>
         <div class="container-lg list-post">
-            {% for post in posts %}
+            {% for post in page_obj %}
                 <a href="/post/{{ post.slug }}" class="list-post--item">
                     <div class="list-post-main">
                         <div class="list-post-img">
@@ -25,6 +25,7 @@
                     </div>
                 </a>
             {% endfor %}
+
         </div>
     </div>
 {% endblock %}

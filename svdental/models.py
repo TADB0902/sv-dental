@@ -1,6 +1,9 @@
 from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.utils.safestring import mark_safe
+from django.db.models.signals import pre_delete
+from django.dispatch.dispatcher import receiver
+
 # Create your models here.
 STATUS = (
     (0,"Draft"),
@@ -49,6 +52,11 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+@receiver(pre_delete, sender=Post)
+def mymodel_delete(sender, instance, **kwargs):
+    # Pass false so FileField doesn't save the model.
+    instance.image.delete(True)
 
 
 class Appointment(models.Model):

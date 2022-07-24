@@ -4,7 +4,7 @@
 {% block carousel %}
     <h1 class="title-tag">KIẾN THỨC NHA KHOA</h1>
     <div class="carousel"
-         data-flickity='{"cellAlign": "left", "contain": true ,"wrapAround": true , "autoPlay": true }'>
+         data-flickity='{ "freeScroll": true, "contain": true ,"wrapAround": true , "autoPlay": true }'>
         {% for post in posts %}
             <div class="card">
                 <a class="card-link" href="/post/{{ post.slug }}">

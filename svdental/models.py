@@ -24,6 +24,7 @@ class Category(models.Model):
 class Post(models.Model):
     # name of post
     title = models.CharField(max_length=200, unique=True)
+    description = models.TextField(null = True)
     # address of post
     image = models.ImageField(upload_to='uploads/%Y/%m', default = None, null=False)
     slug = models.SlugField(max_length=200, unique=True)

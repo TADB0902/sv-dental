@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <p class="card-title">{{ post.title }}</p>
                         <div class="card-post--content">
-                            {{ post.content| safe | truncatechars:150 }}
+                            {{ post.description | truncatechars:150 }}
                         </div>
                         <a href="/post/{{ post.slug }}" class="btn-more">Xem thêm</a>
                     </div>

@@ -1,12 +1,17 @@
 {% extends "base_generic.html" %}
 
 {% load static %}
+
+{% block sildeBar %}
+    {% include "base/slide.html" %}
+{% endblock %}
+
 {% block content %}
 
 <div class="intro wrapper pb-0">
     <div class="intro-content">
         <h1 class="title-tag">NHA KHOA SV - SV Dental</h1>
-        <p class="text-uppercase intro-content__tilte">Nha khoa SV nơi khởi sắc cho những nụ cười đẹp
+        <p class="text-uppercase intro-content__tilte">"Nha khoa SV nơi khởi sắc cho những nụ cười đẹp"
         </p>
         <p class="text-justify intro-content__text">&emsp;Với nguyên tắc “Mang đến những giá trị bền vững cho
             khách hàng những vẫn đảm bảo về mặt thẩm mỹ cũng như những yếu tố liên quan”. Tiếp bước trên mỗi con đường
@@ -32,7 +37,9 @@
     {% endblock %}
 </div>
 
-<div class="service">
+{% include "base/service.html" %}
+
+<!-- <div class="service">
     <h1 class="title-tag">DICH VỤ NỔI BẬT</h1>
     <div class="service-list">
         <div class="service-list-item">
@@ -60,7 +67,7 @@
             <p class="service-item--title">CÁC PHƯƠNG PHÁP ĐIỀU TRỊ</p>
         </div>
     </div>
-</div>
+</div> -->
 <div class="wrapper">
     {% include "base/card.html" %}
 </div>

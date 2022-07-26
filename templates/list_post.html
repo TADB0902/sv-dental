@@ -8,23 +8,23 @@
         </div>
         <div class="container-lg list-post">
             {% for post in page_obj %}
-                <a href="/post/{{ post.slug }}" class="list-post--item border">
+                <a href="/post/{{ post.slug }}" class="list-post--item border rounded">
                     <div class="list-post-main">
-                        <div class="list-post-img mb-1">
+                        <div class="list-post-img">
                             <img class="list-post--image"
                                  src="{{ post.image.url }}"/>
                         </div>
-                        <div class="list-post-detail">
+                        <div class="list-post-detail p-2">
                             <div class="list-post-title">
                                 <h3>{{ post.title }}</h3>
                             </div>
                             <div class="text-secondary">
-                                <p class="mb-1"><i class="bi bi-calendar-event m-2"></i>{{ post.created_on | date:"d/m/Y" }}</p>
+                                <p class="mb-1"><i class="bi bi-calendar-event"></i>{{ post.created_on | date:"d/m/Y" }}</p>
                             </div>
                             <div class="border rounded p-2 text-secondary" style="width: fit-content">
                                 <p class="m-0">#{{ post.category}}</p>
                             </div>
-                            <div class="list-post--content">
+                            <div class="list-post--content ">
                                 {{ post.description | truncatechars:300 }}
                             </div>
                         </div>

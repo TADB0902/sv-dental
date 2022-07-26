@@ -461,17 +461,76 @@ a:hover {
     transform: scale(1.05);
 }
 
+.service-main{
+    display: flex;
+    padding: 25px 0;
+}
+
+.service-new{
+    padding: auto;
+    position: relative;
+}
+
+.service-logo{
+    width: 250px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.service-des{
+    position: relative;
+    align-items: center;
+    width: 450px;
+    
+}
+
+.service-des > p {
+    text-align: justify;
+}
+
+.service-item{
+    position: relative;
+    width: 230px;
+    text-align: center;
+}
+
+.service-img{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding:0 20px;
+    flex-wrap: wrap;
+    
+}
+
+.service-new::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://res.cloudinary.com/drg01iq3f/image/upload/v1658217282/rvcontent/br-service_nc1pfp.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0.15;
+}
+
+.card-post_relevant{
+    width: 30% !important;
+}
 
 /* CARD */
 
 .card {
     width: 23.3%;
     margin: 5px 10px;
-    height: 400px;
     overflow: hidden;
     border-radius: 10px;
-    border: none !important;
-    box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px;
+    min-height: 550px;
 }
 
 .card-title {
@@ -538,6 +597,8 @@ a:hover {
     color: #4aa3df !important;
     font-size: 17px;
     font-weight: 600;
+    background-color: #fff;
+    padding:5px 10px
 }
 
 
@@ -571,7 +632,6 @@ a:hover {
 
 .list-post--item {
     margin: 10px 20px;
-    padding: 10px 0;
     border-bottom: 2px solid #4aa3df;
 }
 
@@ -641,20 +701,23 @@ a:hover {
 
 }
 
+.service-item--image {
+    width: 150px;
+    height: 160px;
+    object-fit: cover;
+    transition: all 0.5s ease-out;
+    border: #0a6ebd solid 1.5px;
+    border-radius: 10px;
+    
+}
+
 .service-list-item {
     margin: 20px;
     text-align: center;
     cursor: pointer;
 }
 
-.service-item--image {
-    width: 275px;
-    height: 200px;
-    object-fit: cover;
-    transition: all 0.5s ease-out;
-    border: #0a6ebd solid 1.5px;
-    border-radius: 10px;
-}
+
 
 .service-item--image:hover {
     transform: scale(1.05);
@@ -662,10 +725,12 @@ a:hover {
 
 .service-item--title {
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     color: #025899;
 }
+
+
 
 
 .service::before {
@@ -739,7 +804,6 @@ a:hover {
 .contact-address {
     font-size: 20px;
     text-align: left;
-    font-weight: 600;
     color: #006098;
     line-height: 1.5;
 
@@ -867,15 +931,22 @@ a:hover {
     }
 
     .card {
-        height: 400px;
+        min-height: 450px;
         width: 30%;
     }
 
     .card-img-top {
         width: 100%;
-        height: 150px;
-        object-fit: cover;
+        height: 200px;
 
+    }
+
+    .service-main{
+        flex-direction: column;
+    }
+
+    .service-des{
+        width: 100%;
     }
 
 
@@ -890,6 +961,11 @@ a:hover {
 
     .service-item--title {
         margin: 5px;
+    }
+
+    .service-item--image {
+        width: 200px;
+        height: 200px;
     }
 
     .intro-content {
@@ -912,11 +988,32 @@ a:hover {
 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 720px){
+
+    .card-post_relevant{
+        width: 90% !important;
+    }
+
     .card {
-        height: 400px;
+        min-height: 400px;
+        width: 30%;
+        padding: none !important;
+    }
+    
+}
+
+@media only screen and (max-width: 540px) {
+    .card {
+        height: 450px;
         width: 100%;
-        padding: 0 20px;
+    }
+
+    .card-body{
+        height: fit-content;
+    }
+
+    .card-review-img--top{
+        height: 90%;
     }
 
     .list-post-main {

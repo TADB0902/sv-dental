@@ -1,26 +1,46 @@
 {% extends "base_generic.html" %}
 
 {% load static %}
+
 {% block title %}
-    <title>{{ post.title }}</title>
+<title>{{ post.title }}</title>
 {% endblock %}
 
 
 {% block content %}
-    <div class="title-tag-main">
-        <div class="title-tag-content">
-            <h1 class="title-tag-header">{{ post.title }}</h1>
-            <div class="title-tag-item d-flex justify-content-center">
-                <p class="title-tag-item">Danh mục: {{ post.category }}</p>
-                <p class="title-tag-item">Ngày tạo: {{ post.created_on | date:"d/m/Y" }}</p>
-            </div>
-
-        </div>
-
-    </div>
-    <div class="wrapper-content">
-        <div class="content">
-            {{ post.content | safe }}
+<div class="title-tag-main">
+    <div class="title-tag-content">
+        <h1 class="title-tag-header">{{ post.title }}</h1>
+        <div class="title-tag-item d-flex justify-content-center">
+            <p class="title-tag-item ">Danh mục: {{ post.category }}</p>
+            <p class="title-tag-item">Ngày tạo: {{ post.created_on | date:"d/m/Y" }}</p>
         </div>
     </div>
+</div>
+<div class="wrapper-content">
+    <div class="content border-bottom">
+        {{ post.content | safe }}
+    </div>
+</div>
+<div class="wrapper-content pt-0">   
+    <h1 class="title-tag mb-2">BÀI VIẾT LIÊN QUAN</h1>
+    <div class="d-flex justify-content-around flex-wrap">
+        {% for post_re in post_relevant %}
+        <div class="card card-post_relevant border">
+            <a class="card-link" href="/post/{{ post.slug }}">
+                <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-title">{{ post_re.title }}</p>
+                    <div class="card-post--content">
+                        {{ post_re.description | truncatechars:150 }}
+                    </div>
+                    <a href="/post/{{ post.slug }}" class="btn-more">Xem thêm</a>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
 {% endblock %}

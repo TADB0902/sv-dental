@@ -20,19 +20,23 @@ def index(request):
 
 
 def postDetail(request, pk):
-    post = get_object_or_404(Post, pk=pk, active=True, status=1)
+    post = Post.objects.filter(pk=pk, active=True, status=1)
+    post_relevant = Post.objects.all()
 
     context = {
         'post': post,
+        'post_relevant': post_relevant,
     }
+ 
     return render(request, "detail.html", context=context)
 
 
 def postDetailWithSlug(request, slug):
     post = get_object_or_404(Post, slug=slug, active=True, status=1)
-
+    post_relevant = Post.objects.filter(active=True, status=1, category = post.category).order_by("-created_on")[:3]
     context = {
         'post': post,
+        'post_relevant': post_relevant,
     }
     return render(request, "detail.html", context=context)
 
@@ -40,7 +44,6 @@ def postDetailWithSlug(request, slug):
 def getKienThucNhaKhoa(request):
     posts = Post.objects.filter(active=True, status=1)
 
-    print(posts)
     context = {
         'posts': posts,
     }

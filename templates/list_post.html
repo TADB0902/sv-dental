@@ -7,30 +7,6 @@
         <h1 class="p-5 title-tag-main--content">KIẾN THỨC NHA KHOA</h1>
     </div>
     <div class="list-post--main d-flex container-lg ">
-        <div class="filter-post">
-            <div class="category border rounded p-3">
-                <h1 class="title-tag-main--content">DANH MỤC</h1>
-                <ul class="category-item p-1 m-0">
-                    <li><a class="text-decoration-none" href="#">Trồng răng
-                            Implant công nghệ Pháp</a></li>
-                    <li><a class="text-decoration-none" href="#">Kỹ thuật
-                            Implant All On 4 và All On 6</a></li>
-                    <li><a class="text-decoration-none" href="#">Bảng giá
-                            Implant</a></li>
-                </ul>
-                <div class="facebook__page">
-
-                    <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
-                        data-tabs="timeline" data-width="300" data-height="250" data-small-header="false"
-                        data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
-                        <blockquote cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
-                            class="fb-xfbml-parse-ignore"><a
-                                href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha
-                                Khoa SV</a></blockquote>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="list-post">
             {% for post in page_obj %}
             <a href="/post/{{ post.slug }}" class="list-post--item border rounded">
@@ -49,13 +25,47 @@
                         <div class="border rounded p-2 text-secondary" style="width: fit-content">
                             <p class="m-0">#{{ post.category}}</p>
                         </div>
-                        <div class="list-post--content ">
-                            {{ post.description | truncatechars:300 }}
+                        <div class="list-post--content p-2">
+                            {{ post.description | truncatechars:250 }}
                         </div>
                     </div>
                 </div>
             </a>
             {% endfor %}
+        </div>
+        <div class="filter-post">
+            <div class="category p-3">
+                <h1 class="title-tag__content">Kiến thức liên quan</h1>
+                <ul class="category-item border p-4 m-0">
+                    <li>
+                        <i class="bi bi-chevron-right icon-customize"></i>
+                        <a class="text-decoration-none" href="#">Trồng răng Implant</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-chevron-right icon-customize"></i>
+                        <a class="text-decoration-none" href="#">Kiến thức răng sứ</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-chevron-right icon-customize"></i>
+                        <a class="text-decoration-none" href="#">Niềng răng thẩm mỹ</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-chevron-right icon-customize"></i>
+                        <a class="text-decoration-none" href="#">Nha răng khoa tổng hợp</a>
+                    </li>
+                </ul>
+                <div class="facebook__page">
+
+                    <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
+                        data-tabs="timeline" data-width="300" data-height="250" data-small-header="false"
+                        data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+                        <blockquote cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
+                            class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha
+                                Khoa SV</a></blockquote>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -8,6 +8,7 @@
 
 
 {% block content %}
+<!-- tilte of page -->
 <div class="title-tag-main">
     <div class="title-tag-content">
         <h1 class="title-tag-header">{{ post.title }}</h1>
@@ -17,57 +18,76 @@
         </div>
     </div>
 </div>
+<!-- end -->
+<!-- content -->
 <div class="wrapper content-main">
+    <!-- content of post -->
     <div class="content border-bottom">
         {{ post.content | safe }}
     </div>
-    <div class="category border rounded p-3">
-        <ul class="category-item p-1 m-0">
-            <li><a class="text-decoration-none" href="#">Trồng răng
-                    Implant công nghệ Pháp</a></li>
-            <li><a class="text-decoration-none" href="#">Kỹ thuật
-                    Implant All On 4 và All On 6</a></li>
-            <li><a class="text-decoration-none" href="#">Bảng giá
-                    Implant</a></li>
-        </ul>
-        <div class="facebook__page">
+    <!-- block filter -->
+    <div class="filter-post">
+        <div class="category p-3">
+            <h1 class="title-tag__content">Kiến thức liên quan</h1>
+            <ul class="category-item border p-4 m-0">
+                {% for post_re in post_relevant %}
+                <li class="pt-0">
+                    <a class="text-decoration-none" href="/post/{{ post.slug }}">{{ post_re.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="facebook__page">
 
-            <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346" data-tabs="timeline"
-                data-width="300" data-height="250" data-small-header="false" data-adapt-container-width="false"
-                data-hide-cover="true" data-show-facepile="false">
-                <blockquote cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346" class="fb-xfbml-parse-ignore"><a
-                        href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha Khoa SV</a></blockquote>
+                <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
+                    data-tabs="timeline" data-width="300" data-height="250" data-small-header="false"
+                    data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+                    <blockquote cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
+                        class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha
+                            Khoa SV</a></blockquote>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="wrapper-content pt-0">
-    <h1 class="title-tag mb-2">BÀI VIẾT LIÊN QUAN</h1>
-    <div class="d-flex justify-content-around flex-wrap">
-        {% for post_re in post_relevant %}
-        <div class="card card-post_relevant border">
-            <a class="card-link" href="/post/{{ post.slug }}">
-                <img src="{{ post.image.url }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-title">{{ post_re.title }}</p>
-                    <div class="card-post--content">
-                        {{ post_re.description | truncatechars:150 }}
+<!-- end -->
+<!-- more post -->
+<div class="wrapper pt-0">
+    <div class="d-flex flex-wrap">
+        <div class="blog-post-related">
+            <h2 class="related-title">BÀI VIẾT LIÊN QUAN</h2>
+            <div class="post-list__item">
+                {% for post in post_relevant %}
+                <div class="post-item m-2">
+                    <div class="col-inner">
+                        <a href="">
+                            <div class="box">
+                                <div class="box-image">
+                                    <img src="{{ post.image.url }}" alt="{{ post.title }}">
+                                </div>
+                                <div class="box-text ms-4">
+                                    <h5 class="box-title">{{ post.title }}</h5>
+                                    <p class="box-description">{{ post.description | truncatechars:70 }}</p>
+
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <a href="/post/{{ post.slug }}" class="btn-more">Xem thêm</a>
                 </div>
-            </a>
+                {% endfor %}
+            </div>
         </div>
-        {% endfor %}
+
+
     </div>
-
 </div>
+<!-- end -->
 
-<script type="text/javascript"> 
-    var a = "{{post.category}}";
-    console.log(a);
-    if(a == "Home")
+<script type="text/javascript">
+    // check category 
+    var category = "{{post.category}}";
+    if (category == "Home")
         $(".category").css("display", "none")
 
- </script>
+</script>
 
 {% endblock %}

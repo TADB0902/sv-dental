@@ -17,12 +17,31 @@
         </div>
     </div>
 </div>
-<div class="wrapper-content">
+<div class="wrapper content-main">
     <div class="content border-bottom">
         {{ post.content | safe }}
     </div>
+    <div class="category border rounded p-3">
+        <ul class="category-item p-1 m-0">
+            <li><a class="text-decoration-none" href="#">Trồng răng
+                    Implant công nghệ Pháp</a></li>
+            <li><a class="text-decoration-none" href="#">Kỹ thuật
+                    Implant All On 4 và All On 6</a></li>
+            <li><a class="text-decoration-none" href="#">Bảng giá
+                    Implant</a></li>
+        </ul>
+        <div class="facebook__page">
+
+            <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346" data-tabs="timeline"
+                data-width="300" data-height="250" data-small-header="false" data-adapt-container-width="false"
+                data-hide-cover="true" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346" class="fb-xfbml-parse-ignore"><a
+                        href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha Khoa SV</a></blockquote>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="wrapper-content pt-0">   
+<div class="wrapper-content pt-0">
     <h1 class="title-tag mb-2">BÀI VIẾT LIÊN QUAN</h1>
     <div class="d-flex justify-content-around flex-wrap">
         {% for post_re in post_relevant %}
@@ -42,5 +61,13 @@
     </div>
 
 </div>
+
+<script type="text/javascript"> 
+    var a = "{{post.category}}";
+    console.log(a);
+    if(a == "Home")
+        $(".category").css("display", "none")
+
+ </script>
 
 {% endblock %}

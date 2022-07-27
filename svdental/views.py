@@ -32,8 +32,12 @@ def postDetail(request, pk):
 
 
 def postDetailWithSlug(request, slug):
+    # get post detail
     post = get_object_or_404(Post, slug=slug, active=True, status=1)
+
+    # get post relevant
     post_relevant = Post.objects.filter(active=True, status=1, category = post.category).order_by("-created_on")[:3]
+    
     context = {
         'post': post,
         'post_relevant': post_relevant,

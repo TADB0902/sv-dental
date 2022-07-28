@@ -11,20 +11,26 @@ admin.site.index_title = "SVDental Admin"
 
 admin.site.unregister(Group)
 
+class PostInstanceInline(admin.StackedInline):
+    model = Post
+    extra = 1
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "created_on", "active")
+    inlines = [PostInstanceInline]
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('admin_photo', "title", "slug", "created_on", "status", "category", "active")
+    list_display = ('admin_photo', "title", "slug",
+                    "created_on", "status", "category", "active")
     list_filter = ("created_on", "active", "status")
     search_fields = ["title", "slug"]
     readonly_fields = ('admin_photo', 'link_test',)
 
 
 class AppointmentAdmin(admin.ModelAdmin):
-    list_display = ("customerName", "email", "phoneNumber", "created_on", "active")
+    list_display = ("customerName", "email",
+                    "phoneNumber", "created_on", "active")
 
 
 admin.site.register(Category, CategoryAdmin)

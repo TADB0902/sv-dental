@@ -2,29 +2,51 @@
 
 {% load static %}
 
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+{% endblock %}
+
 {% block title %}
 <title>{{ post.title }}</title>
 {% endblock %}
 
 
 {% block content %}
-<!-- tilte of page -->
-<div class="title-tag-main">
-    <div class="title-tag-content">
-        <h1 class="title-tag-header">{{ post.title }}</h1>
-        <div class="title-tag-item d-flex justify-content-center">
-            <p class="title-tag-item ">Danh mục: {{ post.category }}</p>
-            <p class="title-tag-item">Ngày tạo: {{ post.created_on | date:"d/m/Y" }}</p>
+<nav aria-label="breadcrumb ">
+    <ol class="breadcrumb wrapper text-primary p-3">
+        <li class="breadcrumb-item">
+            <a href="/">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/kien-thuc-nha-khoa/{{post.category}}"> Kiến thức nha khoa</a>
+        </li>
+        <li class="breadcrumb-item active">
+            <a>{{ post.title }}</a>
+        </li>
+    </ol>
+</nav>
+<!-- content -->
+<div class="wrapper content-main pt-0">
+    <!-- content of post -->
+    <div>
+        <!-- tilte of page -->
+        <div class="title-tag-main">
+            <div class="title-tag-content">
+                <h1 class="title-tag-header title-border-bottom">{{ post.title }}</h1>
+                <div class="title-tag-item">
+                    <p class="title-tag__item">
+                        <i class="bi bi-calendar-check m-2 text-dark"></i>
+                        {{ post.created_on | date:"d/m/Y" }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+        <div class="content border-bottom">
+            {{ post.content | safe }}
         </div>
     </div>
-</div>
-<!-- end -->
-<!-- content -->
-<div class="wrapper content-main">
-    <!-- content of post -->
-    <div class="content border-bottom">
-        {{ post.content | safe }}
-    </div>
+
     <!-- block filter -->
     <div class="filter-post">
         <div class="category p-3">
@@ -32,12 +54,11 @@
             <ul class="category-item border p-4 m-0">
                 {% for post_re in post_relevant %}
                 <li class="pt-0">
-                    <a class="text-decoration-none" href="/post/{{ post.slug }}">{{ post_re.title }}</a>
+                    <a class="text-decoration-none" href="/post/{{ post_re.slug }}">{{ post_re.title }}</a>
                 </li>
                 {% endfor %}
             </ul>
             <div class="facebook__page">
-
                 <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
                     data-tabs="timeline" data-width="300" data-height="250" data-small-header="false"
                     data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
@@ -45,6 +66,11 @@
                         class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha
                             Khoa SV</a></blockquote>
                 </div>
+            </div>
+            <div class="filter-img border">
+                <img class="filter-img__item"
+                    src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658993650/carousel/poster_ncdmdg.png"
+                    alt="Nha khoa SV">
             </div>
         </div>
     </div>
@@ -59,7 +85,7 @@
                 {% for post in post_relevant %}
                 <div class="post-item m-2">
                     <div class="col-inner">
-                        <a href="">
+                        <a href="/post/{{ post.slug }}">
                             <div class="box">
                                 <div class="box-image">
                                     <img src="{{ post.image.url }}" alt="{{ post.title }}">
@@ -67,7 +93,6 @@
                                 <div class="box-text ms-4">
                                     <h5 class="box-title">{{ post.title }}</h5>
                                     <p class="box-description">{{ post.description | truncatechars:70 }}</p>
-
                                 </div>
                             </div>
                         </a>

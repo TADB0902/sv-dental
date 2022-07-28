@@ -1,13 +1,30 @@
 {% extends "base_generic.html" %}
 {% load static %}
 
+{% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/list_post.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="list">
-    <div class="title-tag-main">
-        <h1 class="p-5 title-tag-main--content">KIẾN THỨC NHA KHOA</h1>
+    <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb wrapper text-primary p-3">
+            <li class="breadcrumb-item">
+                <a href="/">Trang chủ</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <a>Kiến thức nha khoa</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <a></a>
+            </li>
+        </ol>
+    </nav>
+    <div class="title-tag-main wrapper p-0">
+        <h1 class="p-2 title-tag-header title-border-bottom">KIẾN THỨC NHA KHOA</h1>
     </div>
-    <div class="list-post--main d-flex container-lg ">
-        <div class="list-post">
+    <div class="list-post--main d-flex  wrapper">
+        <div class="list-post p-0">
             {% for post in page_obj %}
             <a href="/post/{{ post.slug }}" class="list-post--item border rounded">
                 <div class="list-post-main">
@@ -39,11 +56,13 @@
                 <ul class="category-item border p-4 m-0">
                     <li>
                         <i class="bi bi-chevron-right icon-customize"></i>
-                        <a class="text-decoration-none" href="#">Trồng răng Implant</a>
+                        <a class="text-decoration-none" href="/kien-thuc-nha-khoa/trong-rang-implant">Trồng răng
+                            Implant</a>
                     </li>
                     <li>
                         <i class="bi bi-chevron-right icon-customize"></i>
-                        <a class="text-decoration-none" href="#">Kiến thức răng sứ</a>
+                        <a class="text-decoration-none" href="/kien-thuc-nha-khoa/trong-rang-implant">Kiến thức răng
+                            sứ</a>
                     </li>
                     <li>
                         <i class="bi bi-chevron-right icon-customize"></i>
@@ -51,7 +70,8 @@
                     </li>
                     <li>
                         <i class="bi bi-chevron-right icon-customize"></i>
-                        <a class="text-decoration-none" href="#">Nha răng khoa tổng hợp</a>
+                        <a class="text-decoration-none" href="/kien-thuc-nha-khoa/nha-khoa-tong-hop">Nha khoa tổng
+                            hợp</a>
                     </li>
                 </ul>
                 <div class="facebook__page">
@@ -69,4 +89,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}

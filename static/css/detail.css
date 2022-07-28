@@ -1,0 +1,66 @@
+/* CARD MINIMUM */
+.related-title {
+  color: #005b9c;
+  font-size: 18px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 9px;
+  margin-bottom: 15px;
+}
+
+.related-title:before {
+  content: "";
+  background: #ffb510 !important;
+  width: 50px;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+}
+
+.post-list__item {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.post-item {
+  display: flex;
+}
+
+.box-description {
+  color: #555;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: justify;
+}
+
+.box-title {
+  font-size: 14px;
+  color: #005b9c;
+}
+
+.box-image > img {
+  width: 130px;
+  height: 130px;
+}
+
+.box-text {
+  width: 250px;
+}
+
+.box {
+  display: flex;
+}
+
+.title-tag-content {
+  position: relative;
+  color: #8a441e;
+}
+
+.title-tag__item {
+  font-size: 16px;
+  color: #9e9393;
+  font-style: italic;
+}

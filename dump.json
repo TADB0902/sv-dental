@@ -1,0 +1,79 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$320000$Y1aRqkGtARdE1GfYhSBeQq$OnCy1SqSLaUkxoKyPQr223yXcETDoTR2pM17MqAkTAg=",
+    "last_login": "2022-07-22T09:03:10.203Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-07-06T04:31:21.352Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d94yyvfyvve3oajqpiyn35qziq6nmvyq",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAURO_iGlnxljiU9JzB-ptwANlSnFSIu4OlFFBMM-_NvFSCfctpb7KmhdVZGXX67RDoIaUDvkO5VU21bOuCuiv6oE1fK8vzcrh_Bxla7muUQGA8DkE8WIke_DwSGudEovM2RgyGiWUI00yj8ROgRcffWIyk3h_4_jhL:1o950g:CyZ9XR6N4rrur3ZPYpv2Gdno1cpPtTm46-SAQLFoQQg",
+    "expire_date": "2022-07-20T13:24:06.036Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dzm7rvaohlzi33td245kj1pllo5orym7",
+  "fields": {
+    "session_data": ".eJxVjDkOwjAURO_iGlnxljiU9JzB-ptwANlSnFSIu4OlFFBMM-_NvFSCfctpb7KmhdVZGXX67RDoIaUDvkO5VU21bOuCuiv6oE1fK8vzcrh_Bxla7muUQGA8DkE8WIke_DwSGudEovM2RgyGiWUI00yj8ROgRcffWIyk3h_4_jhL:1oEoYw:Vu3T-Dp_PlP6yYERVmqjoiElMOgokXMhNCUtqSMQ3hM",
+    "expire_date": "2022-08-05T09:03:10.210Z"
+  }
+},
+{
+  "model": "svdental.category",
+  "pk": 1,
+  "fields": {
+    "name": "rang-su",
+    "updated_on": "2022-07-24T12:21:48.798Z",
+    "created_on": "2022-07-06T04:49:07.351Z",
+    "active": true
+  }
+},
+{
+  "model": "svdental.category",
+  "pk": 2,
+  "fields": {
+    "name": "Home",
+    "updated_on": "2022-07-09T05:16:29.474Z",
+    "created_on": "2022-07-09T05:16:29.474Z",
+    "active": true
+  }
+},
+{
+  "model": "svdental.category",
+  "pk": 3,
+  "fields": {
+    "name": "trong-rang-implant",
+    "updated_on": "2022-07-24T13:37:26.662Z",
+    "created_on": "2022-07-24T13:37:26.662Z",
+    "active": true
+  }
+},
+{
+  "model": "svdental.category",
+  "pk": 4,
+  "fields": {
+    "name": "nha-khoa-tong-hop",
+    "updated_on": "2022-07-24T13:37:45.762Z",
+    "created_on": "2022-07-24T13:37:45.762Z",
+    "active": true
+  }
+},
+{
+  "model": "svdental.post",
+  "pk": 1,
+  "fields": {
+    "title": 

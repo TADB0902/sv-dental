@@ -26,7 +26,7 @@ a:hover {
 
   max-width: 1000px; /* 2 */
 
-  padding: 40px 10px;
+  padding: 20px 10px;
 }
 
 .wrapper {
@@ -77,6 +77,23 @@ a:hover {
   position: absolute;
   display: block;
 }
+
+.title-border-bottom-center {
+  position: relative;
+}
+
+.title-border-bottom-center:after {
+  content: "";
+  width: 70px;
+  position: absolute;
+  background: #ffc544;
+  margin-left: -35px;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  height: 3px;
+}
+
 /* INTRO */
 .info {
   margin-top: 5px;
@@ -149,11 +166,12 @@ a:hover {
 .title-tag {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 28px;
   color: #025899;
   text-align: center;
   margin: 10px 0;
   position: relative;
+  padding: 5px 0;
 }
 
 .card-link {
@@ -162,9 +180,10 @@ a:hover {
 
 .card-post--content {
   line-height: 1.5;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   text-align: justify;
+  color: #555;
 }
 
 .card-title:hover,
@@ -221,7 +240,6 @@ a:hover {
 
 .carousel {
   width: auto;
-
 }
 
 .category-item > li {
@@ -391,7 +409,6 @@ a:hover {
   height: 100%;
 }
 
-
 /* FOOTER */
 
 .footer-sv {
@@ -543,6 +560,10 @@ a:hover {
     font-size: 40px;
   }
 
+  .service-des {
+    width: 100% !important;
+  }
+
   .carousel-item--image {
     height: 300px;
   }
@@ -572,26 +593,16 @@ a:hover {
     z-index: 2;
   }
 
-  .form {
-    padding: 10px 30px;
-  }
-
   .card {
-    min-height: 450px;
     width: 30%;
   }
 
   .card-img-top {
     width: 100%;
-    height: 200px;
   }
 
   .service-main {
     flex-direction: column;
-  }
-
-  .service-des {
-    width: 100%;
   }
 
   .category {
@@ -635,9 +646,8 @@ a:hover {
   }
 
   .box-text {
-    width: 250px;
+    width: 200px;
   }
-  
 
   .card {
     min-height: 400px;
@@ -656,25 +666,35 @@ a:hover {
   .features-list {
     flex-direction: column;
     justify-content: center;
+
   }
 
   .features-item__img {
     max-width: 50%;
   }
+  .intro-content {
+    margin-right: 0 !important;
+  }
+
 }
 
 @media only screen and (max-width: 540px) {
-  .card {
-    height: 450px;
-    width: 100%;
+  .card,
+  .card-review {
+    width: 100% !important;
+    justify-content: space-between;
+  }
+
+  .box-text {
+    width: 100% !important;
   }
 
   .card-body {
-    height: fit-content;
+    flex: none !important;
   }
 
   .card-review-img--top {
-    height: 90%;
+    height: 250px !important;
   }
 
   .list-post-main {
@@ -686,8 +706,8 @@ a:hover {
   }
 
   .list-post-detail {
-    width: 100%;
-    margin: 0;
+    width: 100% !important;
+    margin: 0 !important;
     text-align: justify;
   }
 
@@ -695,7 +715,7 @@ a:hover {
     width: 100%;
   }
 
-  .footer-main--info{
+  .footer-main--info {
     text-align: left;
   }
 }

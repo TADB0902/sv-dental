@@ -15,10 +15,10 @@
 <nav aria-label="breadcrumb ">
     <ol class="breadcrumb wrapper text-primary p-3">
         <li class="breadcrumb-item">
-            <a href="/">Trang chủ</a>
+            <a href="/">TRANG CHỦ</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="/kien-thuc-nha-khoa/{{post.category}}"> Kiến thức nha khoa</a>
+            <a href="/kien-thuc-nha-khoa/{{post.category}}">KIẾN THỨC NHA KHOA</a>
         </li>
         <li class="breadcrumb-item active">
             <a>{{ post.title }}</a>
@@ -90,7 +90,7 @@
                                 <div class="box-image">
                                     <img src="{{ post.image.url }}" alt="{{ post.title }}">
                                 </div>
-                                <div class="box-text ms-4">
+                                <div class="box-text ms-4 text-justify">
                                     <h5 class="box-title">{{ post.title }}</h5>
                                     <p class="box-description">{{ post.description | truncatechars:70 }}</p>
                                 </div>

@@ -84,8 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'svdental',
         'USER': 'root',
-        #'PASSWORD': '340082298546TadB',
-        'PASSWORD': '0377019134tT@',
+        'PASSWORD': '340082298546TadB',
         'HOST': ''
     }
 }

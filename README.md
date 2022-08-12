@@ -17,6 +17,7 @@ source env/bin/activate
 
 pip install -r requirements.txt
 ```
+https://docs.python.org/3/library/venv.html#:~:text=A%20virtual%20environment%20is%20a,part%20of%20your%20operating%20system.
 
 create a db and add the credentials to settings.py
 

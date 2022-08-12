@@ -37,10 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary',
     'svdental',
     'ckeditor',
     'ckeditor_uploader',
+    'media',
 ]
 
 MIDDLEWARE = [
@@ -209,4 +212,14 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-# Custome jazzmin tempalte admin
+# Custome upload in cloud
+
+MEDIA_URL = '/svdental/'
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'drg01iq3f',
+    'API_KEY': '884366317119978',
+    'API_SECRET': 'TeuOg-ZGvqzMlW-AOGAXXhYDc7c'
+}

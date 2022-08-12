@@ -1,90 +1,110 @@
-{% extends "base_generic.html" %}
-{% load static %}
-
-{% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/list_post.css' %}">
-{% endblock %}
-
-{% block content %}
+{% extends "base_generic.html" %} {% load static %} {% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/list_post.css' %}" />
+{% endblock %} {% block content %}
 <div class="list">
-    <nav aria-label="breadcrumb ">
-        <ol class="breadcrumb wrapper text-primary p-3">
-            <li class="breadcrumb-item">
-                <a href="/">TRANG CHỦ</a>
-            </li>
-            <li class="breadcrumb-item active">
-                <a>KIẾN THỨC NHA KHOA</a>
-            </li>
-        </ol>
-    </nav>
-    <div class="title-tag-main wrapper p-0">
-        <h1 class="p-2 title-tag-header title-border-bottom">KIẾN THỨC NHA KHOA</h1>
-    </div>
-    <div class="list-post--main d-flex  wrapper">
-        <div class="list-post p-0">
-            {% for post in page_obj %}
-            <a href="/post/{{ post.slug }}" class="list-post--item border rounded">
-                <div class="list-post-main">
-                    <div class="list-post-img">
-                        <img class="list-post--image" src="{{ post.image.url }}" />
-                    </div>
-                    <div class="list-post-detail p-2">
-                        <div class="list-post-title">
-                            <h3>{{ post.title }}</h3>
-                        </div>
-                        <div class="text-secondary">
-                            <p class="mb-1"><i class="bi bi-calendar-event p-2"></i>{{ post.created_on | date:"d/m/Y" }}
-                            </p>
-                        </div>
-                        <div class="border rounded p-2 text-secondary" style="width: fit-content">
-                            <p class="m-0">#{{ post.category}}</p>
-                        </div>
-                        <div class="list-post--content p-2">
-                            {{ post.description | truncatechars:250 }}
-                        </div>
-                    </div>
-                </div>
-            </a>
-            {% endfor %}
-        </div>
-        <div class="filter-post">
-            <div class="category p-3">
-                <h1 class="title-tag__content">Kiến thức liên quan</h1>
-                <ul class="category-item border p-4 m-0">
-                    <li>
-                        <i class="bi bi-chevron-right icon-customize"></i>
-                        <a class="text-decoration-none" href="/kien-thuc-nha-khoa/trong-rang-implant">Trồng răng
-                            Implant</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-chevron-right icon-customize"></i>
-                        <a class="text-decoration-none" href="/kien-thuc-nha-khoa/trong-rang-implant">Kiến thức răng
-                            sứ</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-chevron-right icon-customize"></i>
-                        <a class="text-decoration-none" href="#">Niềng răng thẩm mỹ</a>
-                    </li>
-                    <li>
-                        <i class="bi bi-chevron-right icon-customize"></i>
-                        <a class="text-decoration-none" href="/kien-thuc-nha-khoa/nha-khoa-tong-hop">Nha khoa tổng
-                            hợp</a>
-                    </li>
-                </ul>
-                <div class="facebook__page">
-
-                    <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
-                        data-tabs="timeline" data-width="300" data-height="300" data-small-header="false"
-                        data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
-                        <blockquote cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
-                            class="fb-xfbml-parse-ignore"><a
-                                href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha
-                                Khoa SV</a></blockquote>
-                    </div>
-                </div>
+  <nav aria-label="breadcrumb ">
+    <ol class="breadcrumb wrapper text-primary p-3">
+      <li class="breadcrumb-item">
+        <a href="/">TRANG CHỦ</a>
+      </li>
+      <li class="breadcrumb-item active">
+        <a>KIẾN THỨC NHA KHOA</a>
+      </li>
+    </ol>
+  </nav>
+  <div class="title-tag-main wrapper p-0">
+    <h1 class="p-2 title-tag-header title-border-bottom">KIẾN THỨC NHA KHOA</h1>
+  </div>
+  <div class="list-post--main d-flex wrapper">
+    <div class="list-post p-0">
+      {% for post in page_obj %}
+      <a href="/post/{{ post.slug }}" class="list-post--item border rounded">
+        <div class="list-post-main">
+          <div class="list-post-img">
+            <img class="list-post--image" src="{{ post.image.url }}" />
+          </div>
+          <div class="list-post-detail p-2">
+            <div class="list-post-title">
+              <h3>{{ post.title }}</h3>
             </div>
+            <div class="text-secondary">
+              <p class="mb-1">
+                <i class="bi bi-calendar-event p-2"></i>{{ post.created_on |
+                date:"d/m/Y" }}
+              </p>
+            </div>
+            <div
+              class="border rounded p-2 text-secondary"
+              style="width: fit-content"
+            >
+              <p class="m-0">#{{ post.category}}</p>
+            </div>
+            <div class="list-post--content p-2">
+              {{ post.description | truncatechars:250 }}
+            </div>
+          </div>
         </div>
+      </a>
+      {% endfor %}
     </div>
+    <div class="filter-post">
+      <div class="category p-3">
+        <h1 class="title-tag__content">Kiến thức liên quan</h1>
+        <ul class="category-item border p-4 m-0">
+          <li>
+            <i class="bi bi-chevron-right icon-customize"></i>
+            <a
+              class="text-decoration-none"
+              href="/kien-thuc-nha-khoa/trong-rang-implant"
+              >Trồng răng Implant</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-chevron-right icon-customize"></i>
+            <a
+              class="text-decoration-none"
+              href="/kien-thuc-nha-khoa/trong-rang-implant"
+              >Kiến thức răng sứ</a
+            >
+          </li>
+          <li>
+            <i class="bi bi-chevron-right icon-customize"></i>
+            <a class="text-decoration-none" href="#">Niềng răng thẩm mỹ</a>
+          </li>
+          <li>
+            <i class="bi bi-chevron-right icon-customize"></i>
+            <a
+              class="text-decoration-none"
+              href="/kien-thuc-nha-khoa/nha-khoa-tong-hop"
+              >Nha khoa tổng hợp</a
+            >
+          </li>
+        </ul>
+        <div class="facebook__page">
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
+            data-tabs="timeline"
+            data-width="300"
+            data-height="300"
+            data-small-header="false"
+            data-adapt-container-width="false"
+            data-hide-cover="true"
+            data-show-facepile="false"
+          >
+            <blockquote
+              cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
+                >Nha Khoa SV</a
+              >
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

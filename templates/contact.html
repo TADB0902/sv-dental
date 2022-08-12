@@ -1,38 +1,42 @@
-{% extends "base_generic.html" %}
-
-{% load static %}
-
-{% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/contact.css' %}">
-{% endblock %}
-
-{% block title %}
+{% extends "base_generic.html" %} {% load static %} {% block extrahead %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+{% endblock %} {% block title %}
 <title>Liên hệ nha khoa SV</title>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <h3 class="title-tag title-border-bottom-center">LIÊN HỆ NHA KHOA SV</h3>
 <div class="contact wrapper pb-2">
-    <div class="contact-address p-5 me-2 mb-2">
-        <p><i class="bi bi-house-door-fill"></i><strong>Địa chỉ:</strong><br /> 99 Cao Thắng, Phường 03, Quận 3, TP. Hồ
-            Chí Minh</p>
-        <p><i class="bi bi-telephone-forward"></i><strong>Hotline:</strong><br /> 0933381675 - 02389292525</p>
-        <p><i class="bi bi-calendar-check"></i><strong>Giờ làm việc:</strong></p>
-        <ul class="contact-time p-0">
-            <li><strong>Thứ 2-Thứ 6:</strong> 8h00 – 20h00</li>
-            <li><strong>Thứ 7:</strong> 8h00 – 18h00</li>
-            <li><strong>Chủ Nhật:</strong> 8h00 – 12h00</li>
-        </ul>
-    </div>
-    <div class="contact-img">
-        <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1659082296/contact/PSX_20220729_091022_qycxvp.jpg"
-            alt="Địa Chỉ: 99 Cao Thắng, Phường 03, Quận 03, TP. Hồ Chí Minh" />
-    </div>
+  <div class="contact-address p-5 me-2 mb-2">
+    <p>
+      <i class="bi bi-house-door-fill"></i><strong>Địa chỉ:</strong><br />
+      99 Cao Thắng, Phường 03, Quận 3, TP. Hồ Chí Minh
+    </p>
+    <p>
+      <i class="bi bi-telephone-forward"></i><strong>Hotline:</strong><br />
+      0933381675 - 02389292525
+    </p>
+    <p><i class="bi bi-calendar-check"></i><strong>Giờ làm việc:</strong></p>
+    <ul class="contact-time p-0">
+      <li><strong>Thứ 2-Thứ 6:</strong> 8h00 – 20h00</li>
+      <li><strong>Thứ 7:</strong> 8h00 – 18h00</li>
+      <li><strong>Chủ Nhật:</strong> 8h00 – 12h00</li>
+    </ul>
+  </div>
+  <div class="contact-img">
+    <img
+      src="https://res.cloudinary.com/drg01iq3f/image/upload/v1659082296/contact/PSX_20220729_091022_qycxvp.jpg"
+      alt="Địa Chỉ: 99 Cao Thắng, Phường 03, Quận 03, TP. Hồ Chí Minh"
+    />
+  </div>
 </div>
 <div class="contact-maps wrapper pt-0">
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.506369538957!2d106.67683911458897!3d10.772475292324183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f20e04d7b15%3A0x43ac38a83ad7d9e!2zOTkgxJAuIENhbyBUaOG6r25nLCBQaMaw4budbmcgMywgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1658586156962!5m2!1sen!2s"
-        width="100%" height="440" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.506369538957!2d106.67683911458897!3d10.772475292324183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f20e04d7b15%3A0x43ac38a83ad7d9e!2zOTkgxJAuIENhbyBUaOG6r25nLCBQaMaw4budbmcgMywgUXXhuq1uIDMsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1658586156962!5m2!1sen!2s"
+    width="100%"
+    height="440"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
 </div>
 {% endblock %}

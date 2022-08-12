@@ -1,30 +1,32 @@
-{% extends "base_generic.html" %}
-
-{% load static %}
+{% extends "base_generic.html" %} {% load static %}
 
 {% block extrahead %}
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
 {% endblock %}
 
 <!-- carousel component -->
-{% block sildeBar %}
-{% include "base/slide.html" %}
-{% endblock %}
+{% block sildeBar %} {% include "base/slide.html" %} {% endblock %}
 
 {% block content %}
 <!-- Intro SV DENTAL -->
 <div class="intro wrapper pb-0">
     <div class="intro-content">
         <h1 class="title-tag">NHA KHOA SV - SV Dental</h1>
-        <p class="text-uppercase intro-content__tilte">"Nha khoa SV nơi khởi đầu cho những nụ cười đẹp"
+        <p class="text-uppercase intro-content__tilte">
+            "Nha khoa SV nơi khởi đầu cho những nụ cười đẹp"
         </p>
-        <p class="text-justify intro-content__text">&emsp;Với nguyên tắc “Mang đến những giá trị bền vững cho
-            khách hàng những vẫn đảm bảo về mặt thẩm mỹ cũng như những yếu tố liên quan”. Tiếp bước trên mỗi con đường
-            thành công của nhiều khách hàng, nha khoa SV vinh dự đã có một phần nhỏ giúp họ thay đổi vận mệnh từ chính
-            nụ cười quý giá của khách hàng.</p>
-        <p class="text-justify intro-content__text">&emsp;Hy vọng rằng trong thời gian sắp tới, chúng tôi sẽ có
-            cơ hội được đồng hành cùng bạn để đi tìm được nụ cười hoàn hảo nhất và tuyệt vời nhất, thuộc về bản sắc cá
-            nhân của riêng bạn.</p>
+        <p class="text-justify intro-content__text">
+            &emsp;Với nguyên tắc “Mang đến những giá trị bền vững cho khách hàng những
+            vẫn đảm bảo về mặt thẩm mỹ cũng như những yếu tố liên quan”. Tiếp bước
+            trên mỗi con đường thành công của nhiều khách hàng, nha khoa SV vinh dự đã
+            có một phần nhỏ giúp họ thay đổi vận mệnh từ chính nụ cười quý giá của
+            khách hàng.
+        </p>
+        <p class="text-justify intro-content__text">
+            &emsp;Hy vọng rằng trong thời gian sắp tới, chúng tôi sẽ có cơ hội được
+            đồng hành cùng bạn để đi tìm được nụ cười hoàn hảo nhất và tuyệt vời nhất,
+            thuộc về bản sắc cá nhân của riêng bạn.
+        </p>
     </div>
     <div class="intro-clip">
         <iframe width="100%" height="400" src="https://www.youtube.com/embed/9uqHDhHx56Y"
@@ -36,7 +38,6 @@
 </div>
 <!-- end -->
 
-
 <!-- features -->
 <div class="features mt-3">
     <div class="wrapper pb-0">
@@ -45,30 +46,38 @@
             <div class="features-item">
                 <div class="features-item-img center">
                     <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658217282/rvcontent/br-service_nc1pfp.jpg"
-                        alt="" class="features-item__img">
+                        alt="" class="features-item__img" />
                 </div>
-                <p class="features-item__desc title-border-bottom-center">ĐỘI NGŨ BÁC SĨ CHUYÊN GIA</p>
+                <p class="features-item__desc title-border-bottom-center">
+                    ĐỘI NGŨ BÁC SĨ CHUYÊN GIA
+                </p>
             </div>
             <div class="features-item">
                 <div class="features-item-img center">
                     <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658819784/content_post/iplantsv_hugfmt.jpg"
-                        alt="" class="features-item__img">
+                        alt="" class="features-item__img" />
                 </div>
-                <p class="features-item__desc title-border-bottom-center">CÔNG NGHỆ ĐIỀU TRỊ TIÊN TIẾN</p>
+                <p class="features-item__desc title-border-bottom-center">
+                    CÔNG NGHỆ ĐIỀU TRỊ TIÊN TIẾN
+                </p>
             </div>
             <div class="features-item">
                 <div class="features-item-img center">
                     <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1659184125/icon/_MG_2287_kwnygm.jpg"
-                        alt="" class="features-item__img">
+                        alt="" class="features-item__img" />
                 </div>
-                <p class="features-item__desc title-border-bottom-center">TRANG THIẾT BỊ HIỆN ĐẠI NHẤT</p>
+                <p class="features-item__desc title-border-bottom-center">
+                    TRANG THIẾT BỊ HIỆN ĐẠI NHẤT
+                </p>
             </div>
             <div class="features-item">
                 <div class="features-item-img center">
                     <img src="https://res.cloudinary.com/drg01iq3f/image/upload/v1659184152/icon/_MG_2201_bljqce.jpg"
-                        alt="" class="features-item__img">
+                        alt="" class="features-item__img" />
                 </div>
-                <p class="features-item__desc title-border-bottom-center">DỊCH VỤ NHA KHOA CHẤT LƯỢNG CAO</p>
+                <p class="features-item__desc title-border-bottom-center">
+                    DỊCH VỤ NHA KHOA CHẤT LƯỢNG CAO
+                </p>
             </div>
         </div>
     </div>
@@ -77,9 +86,7 @@
 
 <!--  customer reviews -->
 <div class="wrapper">
-    {% block customer_reviews %}
-    {% include "customer_reviews.html" %}
-    {% endblock %}
+    {% block customer_reviews %} {% include "customer_reviews.html" %} {% endblock %}
 </div>
 <!-- end -->
 
@@ -88,9 +95,7 @@
 <!-- end -->
 
 <!-- block dental knowledge -->
-<div class="wrapper">
-    {% include "base/card.html" %}
-</div>
+<div class="wrapper">{% include "base/card.html" %}</div>
 <!-- end -->
 
 {% endblock %}

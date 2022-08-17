@@ -72,6 +72,11 @@
           src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658993650/carousel/poster_ncdmdg.png"
           alt="Nha khoa SV" />
       </div>
+      <div class="filter-img border">
+        <img class="filter-img__item" id="image-filter"
+          src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658993650/carousel/poster_ncdmdg.png"
+          alt="Nha khoa SV" />
+      </div>
     </div>
   </div>
 </div>
@@ -111,13 +116,18 @@
   // check category
 
   imagesArray = [
-            "",
-            "",
-            ""
+            "https://res.cloudinary.com/drg01iq3f/image/upload/v1660276668/carousel/km_implant_mihgad.png",
+            "https://res.cloudinary.com/drg01iq3f/image/upload/v1660276667/carousel/km_rangsu_ajkeaj.png",
+            "https://res.cloudinary.com/drg01iq3f/image/upload/v1660276661/carousel/km_cvr_vckmqt.png",
+            "https://res.cloudinary.com/drg01iq3f/image/upload/v1660276660/carousel/km_niengrang_fnddmq.png",
+            "https://res.cloudinary.com/drg01iq3f/image/upload/v1660276530/carousel/km-chinhnha_lfdyfn.png"
         ]
 
   var num = Math.floor(Math.random() * imagesArray.length);
 
+  var img = imagesArray[num];
+
+  $("#image-filter").attr("src", img)
 
 </script>
 

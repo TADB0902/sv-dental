@@ -21,7 +21,7 @@ from django.conf.urls import handler400, handler403, handler404, handler500
 
 urlpatterns = [
     path('', include('svdental.urls')),
-    path('admin/', admin.site.urls),
+    path('svdental/security/admin/', admin.site.urls),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 

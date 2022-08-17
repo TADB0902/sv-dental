@@ -54,30 +54,13 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+
+# Delete image when delete post
 @receiver(pre_delete, sender=Post)
 def mymodel_delete(sender, instance, **kwargs):
-    # Pass false so FileField doesn't save the model.
     instance.image.delete(True)
 
 
-class Appointment(models.Model):
-    customerName = models.CharField(max_length=200)
-
-    email = models.EmailField(max_length = 254)
-
-    phoneNumber = models.CharField(max_length=200)
-
-    active = models.BooleanField(default=True)
-
-    # timpstemp
-    updated_on = models.DateTimeField(auto_now= True)
-    created_on = models.DateTimeField(auto_now_add=True)
-
-    class Meta:
-        ordering = ['-created_on', 'active']
-
-    def __str__(self):
-        return self.customerName
 
 
 

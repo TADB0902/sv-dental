@@ -1,13 +1,13 @@
-{% extends "base_generic.html" %} {% load static %} 
+{% extends "base_generic.html" %} {% load static %}
 
 
 {% block extrahead %}
 <link rel="stylesheet" href="{% static 'css/detail.css' %}" />
-{% endblock %} 
+{% endblock %}
 
 {% block title %}
 <title>{{ post.title }}</title>
-{% endblock %} 
+{% endblock %}
 
 {% block content %}
 
@@ -41,10 +41,7 @@
       </div>
     </div>
     <!-- end -->
-    <div
-      class="description"
-      style="text-align: justify; font-size: 20px; line-height: 1.5"
-    >
+    <div class="description" style="text-align: justify; font-size: 20px; line-height: 1.5">
       {{ post.description }}
     </div>
     <div class="content border-bottom">{{ post.content | safe }}</div>
@@ -57,40 +54,23 @@
       <ul class="category-item border p-4 m-0">
         {% for post_re in post_relevant %}
         <li class="pt-0">
-          <a class="text-decoration-none" href="/post/{{ post_re.slug }}"
-            >{{ post_re.title }}</a
-          >
+          <a class="text-decoration-none" href="/post/{{ post_re.slug }}">{{ post_re.title }}</a>
         </li>
         {% endfor %}
       </ul>
       <div class="facebook__page">
-        <div
-          class="fb-page"
-          data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
-          data-tabs="timeline"
-          data-width="300"
-          data-height="250"
-          data-small-header="false"
-          data-adapt-container-width="false"
-          data-hide-cover="true"
-          data-show-facepile="false"
-        >
-          <blockquote
-            cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
-            class="fb-xfbml-parse-ignore"
-          >
-            <a href="https://www.facebook.com/Nha-Khoa-SV-110844020714346"
-              >Nha Khoa SV</a
-            >
+        <div class="fb-page" data-href="https://www.facebook.com/Nha-Khoa-SV-110844020714346" data-tabs="timeline"
+          data-width="300" data-height="250" data-small-header="false" data-adapt-container-width="false"
+          data-hide-cover="true" data-show-facepile="false">
+          <blockquote cite="https://www.facebook.com/Nha-Khoa-SV-110844020714346" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/Nha-Khoa-SV-110844020714346">Nha Khoa SV</a>
           </blockquote>
         </div>
       </div>
       <div class="filter-img border">
-        <img
-          class="filter-img__item"
+        <img class="filter-img__item"
           src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658993650/carousel/poster_ncdmdg.png"
-          alt="Nha khoa SV"
-        />
+          alt="Nha khoa SV" />
       </div>
     </div>
   </div>
@@ -129,8 +109,16 @@
 
 <script type="text/javascript">
   // check category
-  var category = "{{post.category}}";
-  if (category == "Home") $(".category").css("display", "none");
+
+  imagesArray = [
+            "",
+            "",
+            ""
+        ]
+
+  var num = Math.floor(Math.random() * imagesArray.length);
+
+
 </script>
 
 {% endblock %}

@@ -38,7 +38,6 @@ a:hover {
   padding: 40px 10px;
 }
 
-
 .center {
   display: block;
   margin-left: auto;
@@ -385,6 +384,7 @@ a:hover {
 .header-menu-item > li {
   color: #8a441e;
   font-size: 15px;
+  list-style: none;
 }
 
 .header-menu-item a {
@@ -566,7 +566,7 @@ a:hover {
   }
 
   .carousel-item--image {
-    height: 300px;
+    height: 350px;
   }
 
   .footer-main {

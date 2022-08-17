@@ -1,5 +1,4 @@
-{% load static %}
-{% block header %}
+{% load static %} {% block header %}
 <!-- Header -->
 <div class="header">
   <div class="info">
@@ -13,92 +12,125 @@
   <div class="container header-main">
     <div class="header-logo">
       <a href="/">
-        <img
-          class="header-logo--sv"
-          alt="main logo"
-          src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658055279/carousel/LOGOhd_ygbntw.png"/>
+        <img class="header-logo--sv" alt="main logo"
+          src="https://res.cloudinary.com/drg01iq3f/image/upload/v1658055279/carousel/LOGOhd_ygbntw.png" />
       </a>
     </div>
-                <div class="header-menu-item">
-                    <li>GIỚI THIỆU</li>
-                    <ul class="header-menu--sub">
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Tổng quan về SV</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Cơ sở vật chất </a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Khí chất SV </a></li>
-                    </ul>
-                </div>
-                <div class="header-menu-item">
-                    <li>TRỒNG RĂNG IMPLANT</li>
-                    <ul class="header-menu--sub">
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Trồng răng Implant công nghệ Pháp</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Kỹ thuật Implant All On 4 và All On 6</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Bảng giá Implant</a></li>
-                    </ul>
-
-                </div>
-                <div class="header-menu-item">
-                    <li>BỌC RĂNG SỨ</li>
-                    <ul class="header-menu--sub">
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Bọc răng sứ thẩm mỹ</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Dán Sứ Venner</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Bảng giá răng sứ</a></li>
-                    </ul>
-                </div>
-                <div class="header-menu-item">
-                    <li>DỊCH VỤ KHÁC</li>
-                    <ul class="header-menu--sub">
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Niềng răng thẩm mỹ</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Cạo vôi răng</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Trám răng</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="#">Nhổ răng</a></li>
-                    </ul>
-                </div>
-                <div class="header-menu-item">
-                    <li>
-                        <as>KIẾN THỨC NHA KHOA</as>
-                    </li>
-                    <ul class="header-menu--sub">
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="/kien-thuc-nha-khoa/trong-rang-implant">Kiến thức Implant</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="/kien-thuc-nha-khoa/trong-rang-implant">Kiến thức răng sứ</a></li>
-                        <li><i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
-                                href="/kien-thuc-nha-khoa/nha-khoa-tong-hop">Nha khoa tổng hợp</a></li>
-                    </ul>
-                </div>
-                <div class="header-menu-item">
-                    <li>BẢNG GIÁ BẢO HÀNH</li>
-                </div>
-                <div class="header-menu-item">
-                    <li>KHÁCH HÀNG</li>
-                </div>
-                 <div class="header-menu-item">
-                    <li><a href="/lien-he">LIÊN HỆ</a></li>
-                </div>
-            </ul>
-
+    <div class="header-menu">
+      <i class="bi bi-list-ul header-menu-icon"></i>
+      <ul id="header-menu-res" class="header-menu-ul header-menu-ul--mobile">
+        <div class="header-menu-item">
+          <li>GIỚI THIỆU</li>
+          <ul class="header-menu--sub">
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/tong-quan-ve-sv">Giới thiệu về nha khoa SV</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/khi-chat-sv">Khí chất SV</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/co-so-vat-chat-va-trang-thiet-bi">Cơ sở vật chất và trang thiết bị</a>
+            </li>
+          </ul>
         </div>
+        <div class="header-menu-item">
+          <li>TRỒNG RĂNG IMPLANT</li>
+          <ul class="header-menu--sub">
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/trong-rang-implant-la-gi">Trồng răng Implant công nghệ Pháp</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/trong-rang-implant-toan-ham-all-on-4-all-on-6">Kỹ thuật Implant All On 4 và All On 6</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/bang-gia-bao-hanh">Bảng giá Implant</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-menu-item">
+          <li>BỌC RĂNG SỨ</li>
+          <ul class="header-menu--sub">
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/boc-rang-su-la-nhu-the-nao">Bọc răng sứ thẩm mỹ</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/dan-su-veneer">Dán Sứ Venner</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/bang-gia-bao-hanh">Bảng giá răng
+                sứ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-menu-item">
+          <li>DỊCH VỤ KHÁC</li>
+          <ul class="header-menu--sub">
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/nieng-rang-tham-my-la-gi">Niềng răng thẩm mỹ</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/cao-voi-rang">Cạo vôi răng</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/tram-rang-la-gi">Trám răng</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/post/nho-rang-va-nhung-dieu-can-biet">Nhổ răng</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-menu-item">
+          <li>
+            <a href="#">KIẾN THỨC NHA KHOA</a>
+          </li>
+          <ul class="header-menu--sub">
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/kien-thuc-nha-khoa/TRONG-RANG-IMPLANT">Kiến thức Implant</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/kien-thuc-nha-khoa/BOC-RANG-SU">Kiến thức răng sứ</a>
+            </li>
+            <li>
+              <i class="bi bi-chevron-right icon-customize"></i><a class="text-decoration-none"
+                href="/kien-thuc-nha-khoa/DICH-VU-KHAC">Nha khoa tổng hợp</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-menu-item">
+          <li>
+            <a href="/post/bang-gia-bao-hanh">BẢNG GIÁ ƯU ĐÃI</a>
+          </li>
+        </div>
+        <div class="header-menu-item">
+          <li>KHÁCH HÀNG</li>
+        </div>
+        <div class="header-menu-item">
+          <li><a href="/lien-he">LIÊN HỆ</a></li>
+        </div>
+      </ul>
     </div>
+  </div>
 </div>
 <script>
   $(".header-menu-icon").click(function () {
     if ($("#header-menu-res").hasClass("active-header"))
-      $(".header-menu-ul").removeClass("active-header")
-    else
-        $(".header-menu-ul").addClass("active-header")
-  })
+      $(".header-menu-ul").removeClass("active-header");
+    else $(".header-menu-ul").addClass("active-header");
+  });
 </script>
 {% endblock %}
